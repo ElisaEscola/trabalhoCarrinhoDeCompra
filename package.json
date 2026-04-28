@@ -1,0 +1,25 @@
+{
+  "name": "trabalhocarrinhodecompra-1",
+  "version": "1.0.0",
+  "description": "O Front-end (HTML): Criar um arquivo index.html com um formulário que peça as seguintes informações: Nome do Produto (input text) Preço Unitário (input number) Quantidade (input number) Cupom de Desconto (input text) O formulário deve usar o método POST e apontar para a rota: http://localhost:8080/finalizar-venda.",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElisaEscola/trabalhoCarrinhoDeCompra.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ElisaEscola/trabalhoCarrinhoDeCompra/issues"
+  },
+  "homepage": "https://github.com/ElisaEscola/trabalhoCarrinhoDeCompra#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {}
+}
