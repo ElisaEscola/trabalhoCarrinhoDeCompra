@@ -28,3 +28,6 @@ Resposta de Sucesso: Se tudo estiver certo ➔ Status 201 (Created), devolvendo 
 [0,5 pt] Servidor recebendo dados pelo req.body sem erros.
 [0,5 pt] Lógica de cálculo e aplicação do cupom "PROMO20" funcionando.
 [0,5 pt] Uso correto dos Status Codes (400 para erro e 201 para sucesso).
+
+
+ola
