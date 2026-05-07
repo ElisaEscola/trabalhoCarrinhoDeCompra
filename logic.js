@@ -7,15 +7,18 @@ app.use(express.json());
 
 app.post('/finalizar-venda', (req, res) => {
     const dadosVenda = req.body;
+    const preco = parseFloat(dadosVenda.preco);
+    const quantidade = parseInt(dadosVenda.quantidade);
     const total = dadosVenda.preco * dadosVenda.quantidade;
 
-    if (!dadosVenda.quantidade || isNaN(dadosVenda.quantidade) || dadosVenda.quantidade <= 0) {
+    if (!quantidade || isNaN(quantidade) || quantidade <= 0) {
         return res.status(400).json({
             sucesso: false,
             erro: "Dados inválidos na quantidade!"
         });
     }
-    if (!dadosVenda.preco || isNaN(dadosVenda.preco) || dadosVenda.preco <= 0) {
+
+    if (!preco || isNaN(preco) || preco <= 0) {
         return res.status(400).json({
             sucesso: false,
             erro: "Preço inválido! O valor deve ser maior que zero."
@@ -30,8 +33,12 @@ app.post('/finalizar-venda', (req, res) => {
             status: "compra confirmada"
         });
     }
+    const totalFormatado = total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
 
-    return res.send(`Venda de ${dadosVenda.nome} finalizada! O total foi ${total}`);
+    return res.send(`Venda de ${dadosVenda.produto} finalizada! O total foi ${total}`);
 });
 
 app.listen(porta, () => {
